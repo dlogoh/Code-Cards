@@ -1,7 +1,7 @@
-import logo from "../../img/logo.png";
+import logo from "../img/logo.png";
 import { useState } from "react";
 
-import "./Navbar.css";
+import "../styles/Navbar.css";
 
 const Navbar = () => {
   const [open, setOpen] = useState("closed");

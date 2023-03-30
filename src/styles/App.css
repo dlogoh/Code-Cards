@@ -85,3 +85,7 @@ textarea,
 select {
   font: inherit;
 }
+
+.nav-container {
+  height: 80px;
+}

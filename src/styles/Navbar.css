@@ -1,10 +1,13 @@
-@import url("../../App.css");
+@import url("../styles/App.css");
 
 nav {
   font-family: var(--ff-primary);
   display: flex;
   justify-content: space-between;
-  margin: 1.4rem;
+  position: fixed;
+  padding: 1.4rem;
+  width: 100%;
+  background: var(--clr-dark);
 }
 
 nav > img {
