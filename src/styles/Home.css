@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  /* margin: 4rem 2rem; */
+  justify-items: center;
   background: rgb(22, 33, 62);
   background: linear-gradient(
     180deg,
@@ -18,7 +18,7 @@
   letter-spacing: 1.2px;
   max-width: 550px;
   text-align: center;
-  margin-top: 7rem;
+  margin-top: 10rem;
 }
 
 .window-container {
@@ -30,7 +30,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  margin-top: 5rem;
+  justify-items: center;
+  margin-top: 8rem;
 }
 
 .text {
@@ -136,11 +137,6 @@
 @media (max-width: 730px) {
   .hero {
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  .hero h1 {
-    margin: auto;
-    margin-top: 4rem;
   }
 
   .window-container {

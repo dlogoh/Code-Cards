@@ -1,18 +1,12 @@
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Footer from "./components/Footer";
+import AppRouter from "./AppRouter";
 import "./styles/App.css";
 
 function App() {
   return (
     <>
       <main className='App'>
-        <div className='nav-container'>
-          <Navbar />
-        </div>
-        <Home />
+        <AppRouter />
       </main>
-      <Footer />
     </>
   );
 }
