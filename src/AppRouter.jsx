@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-// import SignUp from "./pages/SignUp";
+import SignUp from "./pages/SignUp";
 
 const AppRouter = () => {
   return (
@@ -15,6 +15,16 @@ const AppRouter = () => {
               <>
                 <Navbar />
                 <Home />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path='/signup'
+            element={
+              <>
+                <Navbar />
+                <SignUp />
                 <Footer />
               </>
             }
