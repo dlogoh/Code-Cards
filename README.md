@@ -17,7 +17,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/dlogoh/Code-Cards">
-    <img src="images/logo.png" alt="Logo" width="250" height="80">
+    <img src="./src/img/logo.png" alt="Logo" width="250" height="80">
   </a>
 
   <h3 align="center">Code-Cards</h3>
@@ -175,6 +175,6 @@ More information will be included when project is finished.
 [license-url]: https://github.com/dlogoh/Code-Cards/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: /main/src/img/pic1.png
+[product-screenshot]: ./src/img/pic1.png
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/
