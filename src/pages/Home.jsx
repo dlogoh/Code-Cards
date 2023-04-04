@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import heroImg from "../img/group.png";
 import pcImg from "../img/pc.png";
 import cardOne from "../img/card-1.png";
@@ -37,8 +39,8 @@ const Home = () => {
       <section className='get-started'>
         <h2>Get Started Today!</h2>
         <h3>Make a free account and start saving your code!</h3>
-        <a href='#signup'>Sign Up</a>
-        <a href='#login'>Log In</a>
+        <Link to='/signup'>Sign Up</Link>
+        <Link to='/login'>Log In</Link>
       </section>
     </>
   );

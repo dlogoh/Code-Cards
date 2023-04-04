@@ -60,4 +60,4 @@ const LogIn = () => {
   );
 };
 
-export default SignUp;
+export default LogIn;
