@@ -2,15 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/SignUp.css";
 
-const SignUp = () => {
+const LogIn = () => {
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
     password: "",
-    password2: "",
   });
 
-  const { name, email, password, password2 } = formData;
+  const { email, password } = formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -23,20 +21,8 @@ const SignUp = () => {
     <>
       <div className='container'>
         {/* Alert Goes Here!! */}
-        <h2 className='signup-header'>
-          Create an account and save your snippets today!
-        </h2>
+        <h2 className='signup-header'>Log In</h2>
         <form onSubmit={(e) => onSubmit(e)}>
-          <div className='form-control'>
-            <label htmlFor='username'>Username</label>
-            <input
-              type='text'
-              id='name'
-              name='name'
-              value={name}
-              onChange={(e) => onChange(e)}
-            />
-          </div>
           <div className='form-control'>
             <label htmlFor='email'>Email</label>
             <input
@@ -58,24 +44,14 @@ const SignUp = () => {
               onChange={(e) => onChange(e)}
             />
           </div>
-          <div className='form-control'>
-            <label htmlFor='password2'>Verify Password</label>
-            <input
-              type='password'
-              id='password2'
-              name='password2'
-              value={password2}
-              onChange={(e) => onChange(e)}
-            />
-          </div>
           <button type='submit' className='form-btn'>
             Sign Up
           </button>
         </form>
         <h4>
-          Already have an account?{" "}
-          <Link to='/login' className='text-primary'>
-            Log In
+          Don't have an account?{" "}
+          <Link to='/signup' className='text-primary'>
+            Sign Up
           </Link>
         </h4>
         <br />

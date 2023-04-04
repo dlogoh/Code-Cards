@@ -1,6 +1,7 @@
-import logo from "../img/logo.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
+import logo from "../img/logo.png";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
@@ -27,38 +28,38 @@ const Navbar = () => {
       <img src={logo} alt='Code Card Logo' />
       <ul className='nav-links'>
         <li>
-          <a href='#'>Home</a>
+          <Link to='/'>Home</Link>
         </li>
         <li>
-          <a href='#signup'>Sign Up</a>
+          <Link to='/signup'>Sign Up</Link>
         </li>
         <li>
-          <a href='#login'>Log In</a>
+          <Link to='/login'>Log In</Link>
         </li>
         <li>
-          <a href='#contact'>Contact</a>
+          <Link to='/contact'>Contact</Link>
         </li>
       </ul>
       <ul id='menu' className={`menu ${navToggle}`}>
         <li>
-          <a href='#home' className='menu-link' onClick={handleClick}>
+          <Link to='/' className='menu-link' onClick={handleClick}>
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href='#signup' className='menu-link' onClick={handleClick}>
+          <Link to='/signup' className='menu-link' onClick={handleClick}>
             Sign Up
-          </a>
+          </Link>
         </li>
         <li>
-          <a href='#login' className='menu-link' onClick={handleClick}>
+          <Link to='/login' className='menu-link' onClick={handleClick}>
             Log In
-          </a>
+          </Link>
         </li>
         <li>
-          <a href='#contact' className='menu-link' onClick={handleClick}>
+          <Link to='/contact' className='menu-link' onClick={handleClick}>
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
       {/* Hamburger icon */}
