@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import LogIn from "./pages/LogIn";
+import Contact from "./pages/Contact";
 
 const AppRouter = () => {
   return (
@@ -39,6 +40,17 @@ const AppRouter = () => {
                 <ScrollToTop />
                 <Navbar />
                 <LogIn />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path='/contact'
+            element={
+              <>
+                <ScrollToTop />
+                <Navbar />
+                <Contact />
                 <Footer />
               </>
             }
