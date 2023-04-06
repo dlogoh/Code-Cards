@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://dlogoh:dlogoh23@cluster0.hfew2e0.mongodb.net/?retryWrites=true&w=majority",
+  "jwtSecret": "beesechurger"
+}
