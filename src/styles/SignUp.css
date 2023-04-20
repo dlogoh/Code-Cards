@@ -66,6 +66,10 @@
 }
 
 @media (max-width: 550px) {
+  .container {
+    padding-top: 14rem;
+    margin-bottom: 5rem;
+  }
   .container h2 {
     max-width: 350px;
     padding: 0 1rem;

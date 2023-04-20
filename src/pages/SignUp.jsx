@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import axios from "axios";
+import setAuthToken from "../utils/setAuthToken";
 import "../styles/SignUp.css";
 
 const SignUp = () => {
@@ -12,11 +14,56 @@ const SignUp = () => {
 
   const { name, email, password, password2 } = formData;
 
+  if (localStorage.token) {
+    setAuthToken(localStorage.token);
+  }
+
+  // Redirect if authenticated
+  if (localStorage.token) {
+    return <Navigate to='/dashboard' replace={true} />;
+  }
+
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const onSubmit = async (e) => {
-    console.log("hello world");
+    e.preventDefault();
+    if (password !== password2) {
+      console.log("Passwords do not match!");
+    } else {
+      const newUser = {
+        name,
+        email,
+        password,
+      };
+
+      try {
+        const config = {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        };
+        console.log("hello?");
+
+        const body = JSON.stringify(newUser);
+        console.log("so far so good");
+
+        const res = await axios.post(
+          `http://localhost:5000/api/users`,
+          body,
+          config
+        );
+
+        console.log(res.data);
+
+        localStorage.setItem("token", res.data.token);
+
+        setAuthToken(res.data);
+      } catch (error) {
+        console.error(error);
+        console.log("An error happened in try catch block");
+      }
+    }
   };
 
   return (
